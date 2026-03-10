@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--Para colocar os desenhos nos contatos do footer sem baixar-->
+    <title>UBS-Cadastro</title>
+</head>
+<body>
+
+    <header>
+        <div id="menu">
+            <h1>FUNDAÇÃO MUNICIPAL DE SAÚDE - FMS TERESINA</h1>
+        </div>
+
+        <div id="titulo">
+            <h2>CADASTRO</h2>
+        </div>
+
+    
+    </header>
+
+    <main id="corpo">
+        <div>
+            <section id="formulario">
+                <form id="inf">
+                    <div class="registro">
+                        <label for="name">NOME:</label>
+                        <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="registro">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" name="cpf" placeholder="000.000.000-00" inputmode="numeric" maxlength="14" required class="cadastro"> <!--inputmode="numeric": ajuda teclados em celulares-->
+                        <!--pode usar o JavaScript para transformar o 000000000000 em 000.000.000-00 automaticamente-->
+                        <script>
+                            document.getElemtById
+                        </script>
+                    </div>
+
+                    <div class="registro">
+                        <label for="telefone">TELEFONE:</label>
+                        <input type="tel" name="telefone" placeholder="(86) 99999-9999" inputmode="tel" 
+                        maxlength="15" required class="cadastro">
+                        <!--pode usar o JavaScript para permitir que o usuário visualize a imagem antes de enviar-->
+                    </div>
+
+                    <div class="docuc-foto">
+                        <label for="documento">ENVIE UM DOCUMENTO COM FOTO (RG ou CNN):</label>
+                        <input type="file" name="documento" id="rg" accept="image/*" required class="foto">
+                        <!--pode usar o JavaScript para permitir que o usuário visualize a imagem antes de enviar-->
+                    </div>
+
+                    <div class="docuc-foto">
+                        <label for="cartao-sus">ENVIE UMA FOTO OU ARQUIVO DO <strong>CARTÃO DO SUS</strong>:</label>
+                        <input type="file" name="cartao-sus" accept=".jpg, .jpeg, .png, .pdf" required class="foto">
+                        <small>Formatos aceitos: JPG, PNG ou PDF (máx. 5 MB)</small>
+                    </div>
+
+                    <div class="docuc-foto">
+                        <label for="comprovante-endereco">ENVIE O <strong>COMPROVANTE DE ENDEREÇO (conta de luz, água, internet, etc)</strong>:</label>
+                        <input type="file" name="comprovante-endereco" accept=".jpg, .jpeg, .png, .pdf" required class="foto">
+                        <small>Formatos aceitos: JPG, PNG ou PDF (máx. 5 MB)</small>
+                    </div>
+
+                    <div id="botoes">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Limpar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <h3>Fundação Municipal de Saúde de Teresina - FMS</h1>
+      <p>A FMS tem por objetivo o planejamento e a execução da política de saúde do Município de Teresina, desenvolvendo atividades integradas de prevenção, proteção, promoção e recuperação da saúde.</p>
+    <div id = "contato">       
+            <p><i class="fa-solid fa-house"></i> Rua Governador Artur de Vasconcelos, 3015 - Aeroporto, Teresina - PI CEP: 64002-530</p>
+            <p><i class="fa-solid fa-phone"></i><a href="tel:+558632288700">(+55) 86 3228-8700</a></p>
+            <p><i class="fa-solid fa-envelope"></i><a href="mailto:ouvidoriasus@pmt.pi.gov.br" class="cont-esp">ouvidoriasus@pmt.pi.gov.br</a></p>
+            <p><i class="fa-solid fa-location-dot"></i><a href="http://www.google.com/maps?q=Rua+Governador+Artur+de+Vasconcelos,+3015,+Teresina" target="_blank" class="cont-esp">Encontre no Google Maps</a></p>
+        </div>
+        <p>Copyright &copy; 2025, Todos os direitos reservados - Desenvolvido por GTI-FMS</p>
+    </footer>
+</body>
+</html>

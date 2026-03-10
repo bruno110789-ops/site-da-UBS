@@ -1,0 +1,287 @@
+body{
+    width: 100%;  /* largura total */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* organiza os elementos em coluna */
+}
+
+#menu{
+    display: flex;
+    color: white;
+    background-color: rgb(19, 53, 163);
+    font-size: 12px;
+    margin-top: 0;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 8px;
+}
+
+#titulo{
+    display: flex;
+    justify-content: center;
+    padding: 15px 23px 0px 0px;
+    color: rgb(78, 77, 77);
+}
+
+#corpo{
+    display: flex;
+    justify-content: center; /* centraliza na horizontal */
+    align-items: center; /* centraliza na vertical */
+    margin-bottom: 15px;
+}
+
+#formulario{
+    margin: 20px 10vw auto;
+    padding: 10px 10vw;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px; /* limite para telas grandes */
+}
+
+#inf{
+    border: 2px solid black;
+}
+
+.registro{
+    display: flex; /* coloca label e input lado a lado */
+    margin: 15px 0px;
+    padding: 3px 5vw;
+    gap: 5px; /* espaço entre label e input */
+}
+
+.registro input{
+    background-color: rgb(227, 223, 223);
+}
+
+::placeholder{
+    color: black;
+}
+
+.docuc-foto{
+    margin: 18px 0px;
+    padding: 3px 5vw;
+}
+
+#rg{
+    background-color: rgb(227, 223, 223);
+    margin: 3px 0px 0px;
+    padding: 17px 13px 15px;
+    width: 70%;
+}
+
+.docuc-foto input{
+    background-color: rgb(227, 223, 223);
+    margin: 3px 0px 0px;
+    padding: 17px 13px 0px;
+    width: 70%;
+    max-width: 600px;
+}
+
+.docuc-foto small{
+    display: block; /* para funcionar o width */
+    width: 70%;
+    font-size: 12px;
+    background-color: rgb(227, 223, 223);
+    padding: 2px 13px 15px;
+    margin: 0px;
+}
+
+#nome{
+    width: 90%; /* ocupa toda a largura disponível */
+    box-sizing: border-box; /* impede que o padding aumente o tamanho total, sem ultrapassar o limite da div */
+}
+
+.cadastro{
+    width: 30%;
+}
+
+.foto{
+    display: flex; /* para o comando de "escolher arquivo" fique embaixo de label e acima dos "formatos aceitos" */
+    padding: 25px 0vw 10px;
+}
+
+#botoes{
+    display: flex;
+    justify-content: center;
+    padding: 10px 15px 15px;
+}
+
+button{
+    font-size: 18px; /* aumenta o texto */
+    border-radius: 10px;
+    margin: 3px 1vw;
+    padding: 10px;
+    cursor: pointer; /* mostra a maozinha */
+    background-color: rgb(0, 81, 255);
+}
+
+button:hover{
+    background-color: rgb(22, 221, 22);
+    transform: scale(1.08);
+}
+
+footer{
+    color: white;
+    background-color: rgb(36, 35, 35);
+    font-size: 12px; /* tamanho da fonte */
+    margin: 0px;
+    padding: 10px 55vw 10px 5vw; /* 55% da largura para a direita e 5% para a esquerda */
+    text-align: left;
+    font-family:  Arial, Helvetica, sans-serif;
+}
+
+footer h3{
+    font-size: 20px;
+}
+
+footer p{
+    font-size: 14px;
+}
+
+#contato{
+    color: rgb(163, 159, 159);
+    background-color: rgb(36, 35, 35);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#contato p{
+    margin: 5px 0; /* espaçamento entre os parágrafos */
+}
+
+#contato a{
+    color: rgb(163, 159, 159);
+    text-decoration: none; /* remove o sublinhado dos links */
+}
+
+#contato a.cont-esp:hover{ /* mouse apenas para os links com a classe cont-esp */
+    text-decoration: underline;
+}
+
+#contato i{
+    margin-right: 5px;
+}
+
+@media (max-width: 1200px){ /* tablets e notebooks pequenos */
+    #formulario{
+        max-width: 700px;
+    }
+
+    input[name="cpf"],
+    input[name="telefone"] {
+        width: 20%;
+    }
+
+    .registro{
+        padding: 3px 3vw;
+    }
+
+    footer {
+        padding: 10px 35vw 10px 5vw;
+    }
+}
+
+@media (max-width: 992px){ /* celulares e tablets pequenos */
+    #formulario{
+        max-width: 600px;
+        padding: 5px 4vw;
+    }
+
+    input[name="cpf"],
+    input[name="telefone"] {
+        width: 21%;
+    }
+
+    .cadastro{
+        width: 50%;
+    }
+
+    footer{
+        padding: 10px 20vw 10px 5vw;
+        font-size: 11px;
+    } 
+}
+
+@media (max-width: 768px){ /*celulares comuns */
+    #formulario{
+        max-width: 90%;
+        padding: 10px 5vw;
+    }
+
+    .registro{
+        flex-direction: column; /* label e input ficam um embaixo do outro */
+        align-items: flex-start;
+    }
+
+    .registro input,
+    .cadastro {
+        width: 100%;
+    }
+
+    input[name="cpf"],
+    input[name="telefone"] {
+        width: 35%; /* menor que os outros inputs */
+        max-width: 250px;
+    }
+
+    #botoes{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button{
+        width: 80%;
+        margin: 8px 0;
+    }
+
+    footer{
+        padding: 15px 10vw;
+        text-align: center;
+    }
+
+    #contato i{
+        display: block; /* ícones em cima do texto */
+        margin-bottom: 3px;
+    }
+
+    #contato a{
+        display: inline-block; /* para aplicar margin */
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 480px) { /*celulares bem pequenos */
+    #menu h1{
+        font-size: 10px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .registro label{
+        font-size: 14px;
+    }
+
+    input, button{
+        font-size: 14px;
+    }
+
+    input[name="cpf"],
+    input[name="telefone"] {
+        width: 30%;
+        max-width: 200px;
+    }
+
+    #titulo h2{
+        font-size: 18px;
+    }
+
+    footer{
+        padding: 10px 5vw;
+        font-size: 10px;
+    }
+
+    footer h3{
+        font-size: 14px
+    }
+}
